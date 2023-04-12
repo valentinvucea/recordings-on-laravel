@@ -11,8 +11,8 @@ export default function Dashboard({ auth }: PageProps) {
             <Head title="Music Catalog | Home" />
 
             <div className="py-4">
-                <div className="mx-auto columns-2 gap-4 sm:px-4 lg:px-6">
-                    <div className="columns">
+                <div className="mx-auto grid grid-cols-2 gap-4 sm:px-4 lg:px-6">
+                    <div>
                         <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                             <div className="p-6 text-gray-900 dark:text-gray-100">
                                 Search Box
@@ -24,10 +24,16 @@ export default function Dashboard({ auth }: PageProps) {
                                 Add/Edit Records
                             </div>
                         </div>
+
+                        <div className="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                            <div className="p-6 text-gray-900 dark:text-gray-100">
+                                Manage credentials
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="columns">
-                        <div className="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div>
+                        <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                             <div className="p-6 text-gray-900 dark:text-gray-100">
                                 Choirs/Directors related modules
                             </div>
@@ -39,7 +45,13 @@ export default function Dashboard({ auth }: PageProps) {
                             </div>
                         </div>
 
-                        <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                        <div className="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                            <div className="p-6 text-gray-900 dark:text-gray-100">
+                                Recordings related modules
+                            </div>
+                        </div>
+
+                        <div className="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                             <div className="p-6 text-gray-900 dark:text-gray-100">
                                 Recordings related modules
                             </div>
