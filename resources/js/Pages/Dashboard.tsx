@@ -11,7 +11,7 @@ export default function Dashboard({ auth }: PageProps) {
             <Head title="Music Catalog | Home" />
 
             <div className="py-4">
-                <div className="mx-auto grid grid-cols-2 gap-4 sm:px-4 lg:px-6">
+                <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:px-4 lg:px-6">
                     <div>
                         <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                             <div className="p-6 text-gray-900 dark:text-gray-100">

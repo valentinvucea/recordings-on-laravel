@@ -23,9 +23,30 @@ export default function AdminLayout({ user, header, children }: PropsWithChildre
                                     Music Catalog
                                 </Link>
                             </div>
+
+                            <div className="ml-10 hidden md:flex flex flex-1 items-center">
+                                <Link className="text-md text-white hover:text-gray-300 dark:text-gray-100 ml-3" href="/">
+                                    Recordings
+                                </Link>
+                                <Link className="text-md text-white hover:text-gray-300 dark:text-gray-100 ml-3" href="/">
+                                    Choirs
+                                </Link>
+                                <Link className="text-md text-white hover:text-gray-300 dark:text-gray-100 ml-3" href="/">
+                                    Directors
+                                </Link>
+                                <Link className="text-md text-white hover:text-gray-300 dark:text-gray-100 ml-3" href="/">
+                                    Composers
+                                </Link>
+                                <Link className="text-md text-white hover:text-gray-300 dark:text-gray-100 ml-3" href="/">
+                                    Compositions
+                                </Link>
+                                <Link className="text-md text-white hover:text-gray-300 dark:text-gray-100 ml-3" href="/">
+                                    Choirs-Directors
+                                </Link>
+                            </div>
                         </div>
 
-                        <div className="hidden sm:flex sm:items-center sm:ml-6">
+                        <div className="hidden md:flex md:items-center md:ml-6">
                             <div className="ml-3 relative">
                                 <Link className="inline-flex items-center text-white hover:underline dark:text-gray-100 ml-3" href={route('logout')} method="post">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" className="mr-1" viewBox="0 0 64 64" preserveAspectRatio="xMidYMid meet">
@@ -39,7 +60,7 @@ export default function AdminLayout({ user, header, children }: PropsWithChildre
                             </div>
                         </div>
 
-                        <div className="-mr-2 flex items-center sm:hidden">
+                        <div className="-mr-2 flex items-center md:hidden">
                             <button
                                 onClick={() => setShowingNavigationDropdown((previousState) => !previousState)}
                                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out"
@@ -65,7 +86,7 @@ export default function AdminLayout({ user, header, children }: PropsWithChildre
                     </div>
                 </div>
 
-                <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
+                <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' md:hidden'}>
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                             Dashboard
@@ -74,14 +95,13 @@ export default function AdminLayout({ user, header, children }: PropsWithChildre
 
                     <div className="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
                         <div className="px-4">
-                            <div className="font-medium text-base text-gray-800 dark:text-gray-200">
+                            <div className="font-medium text-base text-white dark:text-gray-200">
                                 {user.name}
                             </div>
-                            <div className="font-medium text-sm text-gray-500">{user.email}</div>
+                            <div className="font-medium text-sm text-gray-200">{user.email}</div>
                         </div>
 
                         <div className="mt-3 space-y-1">
-                            <ResponsiveNavLink href={route('profile.edit')}>Profile</ResponsiveNavLink>
                             <ResponsiveNavLink method="post" href={route('logout')} as="button">
                                 Log Out
                             </ResponsiveNavLink>
